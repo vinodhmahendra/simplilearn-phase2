@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Registration Form</title>
+</head>
+<body>
+
+	<h3>Customer Registration Form</h3>
+	<hr />
+
+	<form action="/handling-form-data/register.do" method="POST">
+
+		<table>
+			<tbody>
+				<tr>
+					<td>Customer Name :</td>
+					<td><input type="text" name="CUSTOMER_NAME"></td>
+				</tr>
+
+				<tr>
+					<td>Password :</td>
+					<td><input type="password" name="PASSWORD"></td>
+				</tr>
+				<tr>
+					<td>Gender :</td>
+					<td><input type="radio" name="GENDER" value="Male">
+						Male &nbsp; <input type="radio" name="GENDER" value="Female">
+						Female</td>
+				</tr>
+				<tr>
+					<td>Hobbies :</td>
+					<td><input type="checkbox" name="HOBBIES" value="Movies">
+						Movies &nbsp; <input type="checkbox" name="HOBBIES" value="Music">
+						Music &nbsp; <input type="checkbox" name="HOBBIES" value="Sports">
+						Sports</td>
+				</tr>
+
+				<tr>
+					<td>Country :</td>
+					<td><select name="COUNTRY">
+							<option value="Australia">Australia</option>
+							<option value="USA">USA</option>
+							<option value="India">India</option>
+					</select></td>
+				</tr>
+
+				<tr>
+					<td>Languages Known :</td>
+					<td><select name="LANGUAGES" multiple="multiple">
+							<option value="English">English</option>
+							<option value="French">French</option>
+							<option value="Spanish">Spanish</option>
+							<option value="Kannada">Kannada</option>
+					</select></td>
+				</tr>
+
+				<tr>
+					<td>&nbsp;</td>
+					<td><input type="submit" value="Register" name="btnRegister">
+						&nbsp; <input type="reset" value="Clear" name="btnCLear"></td>
+				</tr>
+			</tbody>
+		</table>
+	</form>
+</body>
+</html>
