@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+/home/cloud_user/trainer/demos/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+869669610.index
+4035001171.index
+2673348381.index
+3254066472.index
+1872922812.index
+3956601116.index
