@@ -225,4 +225,8 @@
   <system systemId="http://www.w3.org/2001/xml.xsd" uri="jar:file:/home/cloud_user/eclipse/jee-2021-03/eclipse/../../../.p2/pool/plugins/org.eclipse.xsd_2.18.0.v20201230-0836.jar!/cache/www.w3.org/2001/xml.xsd"/>
   <uri name="http://www.w3.org/2001/XMLSchema" uri="jar:file:/home/cloud_user/eclipse/jee-2021-03/eclipse/../../../.p2/pool/plugins/org.eclipse.xsd_2.18.0.v20201230-0836.jar!/cache/www.w3.org/2001/XMLSchema.xsd"/>
   <uri id="org.w3c.xinclude" name="http://www.w3.org/2001/XInclude" uri="jar:file:/home/cloud_user/eclipse/jee-2021-03/eclipse/../../../.p2/pool/plugins/org.eclipse.wst.xsl.core_1.2.100.v201907231732.jar!/xslt-schemas/xinclude.xsd"/>
+  <public publicId="-//Hibernate/Hibernate Mapping DTD 3.0//EN" uri="file:/home/cloud_user/eclipse/jee-2021-03/eclipse/../../../.p2/pool/plugins/org.hibernate.eclipse.mapper_5.4.12.v20210126-0748/dtd/hibernate-mapping-3.0.dtd" webURL="http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd"/>
+  <public publicId="-//Hibernate/Hibernate Configuration DTD 3.0//EN" uri="file:/home/cloud_user/eclipse/jee-2021-03/eclipse/../../../.p2/pool/plugins/org.hibernate.eclipse.mapper_5.4.12.v20210126-0748/dtd/hibernate-configuration-3.0.dtd" webURL="http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd"/>
+  <public publicId="-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" uri="file:/home/cloud_user/eclipse/jee-2021-03/eclipse/../../../.p2/pool/plugins/org.hibernate.eclipse.mapper_5.4.12.v20210126-0748/dtd/hibernate-reverse-engineering-3.0.dtd"/>
+  <public publicId="-//Red Hat, Inc.//DTD Meta 1.0//EN" uri="file:/home/cloud_user/.p2/pool/plugins/org.jboss.tools.common.model_3.16.0.v20210224-1041/schema/meta.dtd"/>
 </catalog>
