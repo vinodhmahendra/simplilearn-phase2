@@ -5,24 +5,26 @@
 <hibernate-mapping>
 
 	<class name="com.simplilearn.workshop.model.User" table="users">
-		<!-- primary key  column in Users table -->
+		<!-- primary key column in Users table -->
 		<id name="id" type="int">
-			<column name="id"/>
-			<generator class="identity"/>
+			<column name="id" />
+			<generator class="identity" />
 		</id>
-		
+
 		<property name="name" type="java.lang.String">
-			<column name="name"/>
+			<column name="name" />
 		</property>
-		
-		<property name="total" type="int">
-			<column name="total"/>
-		</property>
-		
-		<property name="goal" type="int">
-			<column name="goal"/>
-		</property>
-	
+
+		<component name="proteinData">
+			<property name="total" type="int">
+				<column name="total" />
+			</property>
+
+			<property name="goal" type="int">
+				<column name="goal" />
+			</property>
+		</component>
+
 	</class>
 
 </hibernate-mapping>

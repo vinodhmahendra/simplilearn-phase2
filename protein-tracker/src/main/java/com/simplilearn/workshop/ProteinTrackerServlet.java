@@ -28,7 +28,7 @@ public class ProteinTrackerServlet extends HttpServlet {
 		
 		User user = new User();
 		user.setName("vinodh  mahendra");
-		user.setGoal(250);
+		user.getProteinData().setGoal(250);
 		
 		//execute database operations
 		session.save(user);
@@ -44,7 +44,7 @@ public class ProteinTrackerServlet extends HttpServlet {
 		User loadedUser = (User) session.get(User.class, 1);
 		
 		//manipulate the object
-		loadedUser.setTotal(loadedUser.getTotal() + 50);
+		loadedUser.getProteinData().setTotal(loadedUser.getProteinData().getTotal() + 50);
 		
 		
 		session.getTransaction().commit();  // auto update
@@ -58,7 +58,7 @@ public class ProteinTrackerServlet extends HttpServlet {
 		out.println("Protein Tracker Application <br/>");
 		
 		out.println("Name : " + loadedUser.getName() + "<br/>");
-		out.println("Goal : " + loadedUser.getGoal()+ "<br/>");
+		out.println("Goal : " + loadedUser.getProteinData().getGoal()+ "<br/>");
 		
 	}
 

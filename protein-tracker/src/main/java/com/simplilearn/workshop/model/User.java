@@ -4,8 +4,16 @@ public class User {
 
 	private int id;
 	private String name;
-	private int total;
-	private int goal;
+	
+	// one way
+	private ProteinData proteinData = new ProteinData();
+	
+	public ProteinData getProteinData() {
+		return proteinData;
+	}
+	public void setProteinData(ProteinData proteinData) {
+		this.proteinData = proteinData;
+	}
 	
 	//define a constructor
 	public User() {
@@ -28,24 +36,5 @@ public class User {
 		this.name = name;
 	}
 
-	public int getTotal() {
-		return total;
-	}
-
-	public void setTotal(int total) {
-		this.total = total;
-	}
-
-	public int getGoal() {
-		return goal;
-	}
-
-	public void setGoal(int goal) {
-		this.goal = goal;
-	}
-
-	@Override
-	public String toString() {
-		return String.format("User [id=%s, name=%s, total=%s, goal=%s]", id, name, total, goal);
-	}
+	
 }
