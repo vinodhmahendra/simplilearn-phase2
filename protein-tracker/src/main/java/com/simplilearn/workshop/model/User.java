@@ -1,5 +1,8 @@
 package com.simplilearn.workshop.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class User {
 
 	private int id;
@@ -15,6 +18,22 @@ public class User {
 		this.proteinData = proteinData;
 	}
 	
+	// one to many
+	private List<UserHistory> history = new ArrayList<UserHistory>();
+	
+	public List<UserHistory> getHistory() {
+		return history;
+	}
+	
+	public void setHistory(List<UserHistory> history) {
+		this.history = history;
+	}
+	
+	//Business method to define it is two-way relationship
+	public void addHistory(UserHistory historyItem) {
+		historyItem.setUser(this);
+		history.add(historyItem);
+	}
 	//define a constructor
 	public User() {
 		super();

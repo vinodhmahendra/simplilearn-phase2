@@ -22,6 +22,7 @@
 
     <!-- hibernate has to understand User as an entity -->
     <mapping resource="com/simplilearn/workshop/model/User.hbm.xml"/>
+    <mapping resource="com/simplilearn/workshop/model/UserHistory.hbm.xml"/>
     
     </session-factory>
 </hibernate-configuration>

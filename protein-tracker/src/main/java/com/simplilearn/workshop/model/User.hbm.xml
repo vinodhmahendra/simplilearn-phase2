@@ -24,6 +24,12 @@
 				<column name="goal" />
 			</property>
 		</component>
+		
+		<list name="history" inverse="true" cascade="save-update">
+			<key column="USER_ID"/>
+			<list-index column="POSITION"/>
+			<one-to-many class="com.simplilearn.workshop.model.UserHistory"/>
+		</list>
 
 	</class>
 
