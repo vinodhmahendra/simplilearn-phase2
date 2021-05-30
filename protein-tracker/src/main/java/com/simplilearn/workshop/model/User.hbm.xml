@@ -15,15 +15,7 @@
 			<column name="name" />
 		</property>
 
-		<component name="proteinData">
-			<property name="total" type="int">
-				<column name="total" />
-			</property>
-
-			<property name="goal" type="int">
-				<column name="goal" />
-			</property>
-		</component>
+		<one-to-one name="proteinData" class="com.simplilearn.workshop.model.ProteinData" cascade="save-update"/>
 		
 		<list name="history" inverse="true" cascade="save-update">
 			<key column="USER_ID"/>

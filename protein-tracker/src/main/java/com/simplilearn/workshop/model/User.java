@@ -7,36 +7,39 @@ public class User {
 
 	private int id;
 	private String name;
-	
-	// one way
-	private ProteinData proteinData = new ProteinData();
-	
+
+	// two way
+	private ProteinData proteinData;
+
+	// define a constructor
+	public User() {
+		setProteinData(new ProteinData());
+	}
+
 	public ProteinData getProteinData() {
 		return proteinData;
 	}
+
 	public void setProteinData(ProteinData proteinData) {
 		this.proteinData = proteinData;
+		proteinData.setUser(this); 
 	}
-	
+
 	// one to many
 	private List<UserHistory> history = new ArrayList<UserHistory>();
-	
+
 	public List<UserHistory> getHistory() {
 		return history;
 	}
-	
+
 	public void setHistory(List<UserHistory> history) {
 		this.history = history;
 	}
-	
-	//Business method to define it is two-way relationship
+
+	// Business method to define it is two-way relationship
 	public void addHistory(UserHistory historyItem) {
 		historyItem.setUser(this);
 		history.add(historyItem);
-	}
-	//define a constructor
-	public User() {
-		super();
 	}
 
 	public int getId() {
@@ -55,5 +58,4 @@ public class User {
 		this.name = name;
 	}
 
-	
 }
