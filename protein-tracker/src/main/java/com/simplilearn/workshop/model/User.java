@@ -1,12 +1,26 @@
 package com.simplilearn.workshop.model;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class User {
 
 	private int id;
 	private String name;
+	//private GoalAlert goalAlert;
+	private Set<GoalAlert> goalAlerts = new HashSet<GoalAlert>();
+	
+	public Set<GoalAlert> getGoalAlerts() {
+		return goalAlerts;
+	}
+
+	public void setGoalAlerts(Set<GoalAlert> goalAlerts) {
+		this.goalAlerts = goalAlerts;
+	}
+
+
 
 	// two way
 	private ProteinData proteinData;
@@ -58,4 +72,5 @@ public class User {
 		this.name = name;
 	}
 
+	
 }

@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.hibernate.Session;
 
+import com.simplilearn.workshop.model.GoalAlert;
 import com.simplilearn.workshop.model.User;
 import com.simplilearn.workshop.model.UserHistory;
 import com.simplilearn.workshop.utils.HibernateUtils;
@@ -32,6 +33,8 @@ public class ProteinTrackerServlet extends HttpServlet {
 		user.setName("vinodh  mahendra");
 		user.addHistory(new UserHistory(new Date(), "setting a name as 'vinodh mahendra'"));
 		user.getProteinData().setGoal(250);
+		user.getGoalAlerts().add(new GoalAlert("Congratulations"));
+		user.getGoalAlerts().add(new GoalAlert("You did it"));
 		user.addHistory(new UserHistory(new Date(), "setting a goal for 250"));
 		
 		// save a user history

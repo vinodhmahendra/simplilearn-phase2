@@ -23,6 +23,18 @@
 			<one-to-many class="com.simplilearn.workshop.model.UserHistory"/>
 		</list>
 
+		<!-- 
+		<join table="USER_GOALALERT" optional="true">
+			<key column="USER_ID"/>
+			<many-to-one name="goalAlert" column="GOALALERT_ID" not-null="true" unique="true" cascade="save-update"/>
+		</join> 
+		-->
+		
+		<set name="goalAlerts" table="USER_GOALALERT" cascade="save-update">
+			<key column="USER_ID"/>
+			<many-to-many class="com.simplilearn.workshop.model.GoalAlert" column="GOALALERT_ID"/>
+		</set>
+		
 	</class>
 
 </hibernate-mapping>

@@ -24,6 +24,6 @@
     <mapping resource="com/simplilearn/workshop/model/User.hbm.xml"/>
     <mapping resource="com/simplilearn/workshop/model/UserHistory.hbm.xml"/>
     <mapping resource="com/simplilearn/workshop/model/ProteinData.hbm.xml"/>
-    
+    <mapping resource="com/simplilearn/workshop/model/GoalAlert.hbm.xml"/>
     </session-factory>
 </hibernate-configuration>
