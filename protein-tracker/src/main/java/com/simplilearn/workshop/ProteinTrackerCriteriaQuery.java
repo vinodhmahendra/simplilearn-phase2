@@ -36,20 +36,30 @@ public class ProteinTrackerCriteriaQuery extends HttpServlet {
 		Session session = HibernateUtils.getSessionFactory().openSession();
 		session.beginTransaction();
 	
+//		CriteriaBuilder builder = session.getCriteriaBuilder();
+//		CriteriaQuery<User> query = builder.createQuery(User.class);
+//		Root<User> root = query.from(User.class);
+//		query.select(root);
+//		
+//		Query<User> q = session.createQuery(query);
+//		List<User> users = q.getResultList();
+//		for (User user : users) {
+//		out.println(user.getName() + "<br/>");
+//	 }
+		
 		CriteriaBuilder builder = session.getCriteriaBuilder();
 		CriteriaQuery<User> query = builder.createQuery(User.class);
 		Root<User> root = query.from(User.class);
-		query.select(root);
+		query.select(root).where(builder.equal(root.get("name"), "Dennis"));
 		
 		Query<User> q = session.createQuery(query);
-		List<User> users = q.getResultList();
-		
+//		List<User> users = q.getResultList();
+		User user = q.getSingleResult();
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
+		out.println(user.getName());
 		
-		for (User user : users) {
-			out.println(user.getName() + "<br/>");
-		}
+
 		
 		session.getTransaction().commit();
 		session.close();
